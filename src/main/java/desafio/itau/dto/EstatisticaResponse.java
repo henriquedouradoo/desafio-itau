@@ -14,8 +14,8 @@ public class EstatisticaResponse {
         this.count = doubleSummaryStatistics.getCount();
         this.sum = doubleSummaryStatistics.getSum();
         this.avg = doubleSummaryStatistics.getAverage();
-        this.min = doubleSummaryStatistics.getMin();
-        this.max = doubleSummaryStatistics.getMax();
+        this.min = Math.min(0, doubleSummaryStatistics.getMin());
+        this.max = Math.max(0, doubleSummaryStatistics.getMax());
     }
 
     public Long getCount() {

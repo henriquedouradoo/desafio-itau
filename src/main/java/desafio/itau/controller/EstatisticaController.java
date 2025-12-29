@@ -22,6 +22,7 @@ public class EstatisticaController {
     @GetMapping
     public ResponseEntity<EstatisticaResponse> getStatistics() {
         DoubleSummaryStatistics stats = service.getStatistic();
+
         return ResponseEntity.ok(new EstatisticaResponse(stats));
     }
 
