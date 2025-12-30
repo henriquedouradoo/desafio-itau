@@ -2,10 +2,12 @@ package desafio.itau.dto;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
 
 import java.time.OffsetDateTime;
 
 @Valid
+@Getter
 public class TransacaoRequest {
 
     @NotNull
@@ -14,11 +16,5 @@ public class TransacaoRequest {
 
     private OffsetDateTime dataHora;
 
-    public Double getValor() {
-        return valor;
-    }
 
-    public OffsetDateTime getDataHora() {
-        return dataHora;
-    }
 }

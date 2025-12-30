@@ -1,7 +1,10 @@
 package desafio.itau.dto;
 
+import lombok.Getter;
+
 import java.util.DoubleSummaryStatistics;
 
+@Getter
 public class EstatisticaResponse {
 
     private Long count;
@@ -18,23 +21,4 @@ public class EstatisticaResponse {
         this.max = Math.max(0, doubleSummaryStatistics.getMax());
     }
 
-    public Long getCount() {
-        return count;
-    }
-
-    public Double getSum() {
-        return sum;
-    }
-
-    public Double getAvg() {
-        return avg;
-    }
-
-    public Double getMin() {
-        return min;
-    }
-
-    public Double getMax() {
-        return max;
-    }
 }

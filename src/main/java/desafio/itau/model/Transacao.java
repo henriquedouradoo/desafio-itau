@@ -1,23 +1,23 @@
 package desafio.itau.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.time.OffsetDateTime;
 
+@Getter
+@Setter
+@AllArgsConstructor
 public class Transacao {
 
     private Double valor;
     private OffsetDateTime dataHora;
 
-    public Transacao(final Double valor, final OffsetDateTime dataHora) {
-        this.valor = valor;
-        this.dataHora = dataHora;
+    @Override
+    public String toString() {
+        return "valor=" + valor +
+                ", dataHora=" + dataHora;
     }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public OffsetDateTime getDataHora() {
-        return dataHora;
-    }
-
 }
